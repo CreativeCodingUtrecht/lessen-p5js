@@ -6,6 +6,9 @@
 - Introduceer CCU [https://creativecodingutrecht.nl/](https://creativecodingutrecht.nl/)
 - Introduceer p5.js. JavaScript. Code voor het web. Interactief. animaties.
 Processing Foundation, sinds 2001.
+- Open Source software, wat betekend dat?
+
+
 - Wat gaan we doen?
 (Als er een thema, een expositie, of een fysiek element aanwezig is bij de workshop (reeks) kan je dit ook behandelen)
 
@@ -28,10 +31,10 @@ Maak aantekeningen in een schrift, handig om iets uit te tekenen voordat je het 
 ---
 # Editor
 
-Laat iedereen de editor openen: editor.p5js.org
+- [ ] Laat iedereen de editor openen: editor.p5js.org
 Account aanmaken is handig zodat je je werk kan opslaan. Geheel gratis.
 
-- Leg globaal uit wat en hoe de editor in elkaar zit
+- [ ] Leg globaal uit wat en hoe de editor in elkaar zit
     - editor / preview
     - save / open
     - examples (voorbeelden)
@@ -89,30 +92,31 @@ Je kan verder vertellen hoe de verschillende waardes iets doen. 1 waarde is grij
 ---
 ## `createCanvas()`
 
-maak canvas: `500 x 500`  
-`background(255);` een kleur naar keuze
+- [ ] maak canvas: `500 x 500`  
+- [ ] `background(255);` een kleur naar keuze
 
 ---
 ## Rondje / cirkel
 
 We gaan een rondje tekenen, daarvoor kunnen we kiezen tussen twee functies: `ellipse()` of `circle()`
 
-Ga naar reference en naar de vorm ellipse  
+- [ ] Ga naar reference en naar de vorm ellipse  
 [https://p5js.org/reference/#/p5/ellipse](https://p5js.org/reference/#/p5/ellipse)   
-Leg uit wat de voorbeelden laten zien, wat de syntax is en argumenten doen.
+- [ ] Leg uit wat de voorbeelden laten zien, wat de syntax is en argumenten doen.
 
 **Goed om te weten:**  
 Het coördinatie systeem begint hier links bovenin met de waarde 0,0.
-Uitleggen met learn pagina [https://p5js.org/learn/coordinate-system-and-shapes.html](https://p5js.org/learn/coordinate-system-and-shapes.html)
+
+Eventueel uitleggen met learn pagina [https://p5js.org/learn/coordinate-system-and-shapes.html](https://p5js.org/learn/coordinate-system-and-shapes.html)
 
 zorg dat iedereen een rondje op zijn scherm heeft.
 
 ---
 ## Vierkant - `rect()`
-Ga naar reference van `rect()`  
+- [ ] Ga naar reference van `rect()`  
 [https://p5js.org/reference/#/p5/rect](https://p5js.org/reference/#/p5/rect)
 
-- voorbeeld 1 legt uit waar de lokatie is en hoe groot het vierkant is
+- voorbeeld 1 legt uit waar de lokatie is en hoe groot het vierkant is  
 - ronde hoeken zijn mogelijk met een extra argument.
 
 *wat is het verschil met `ellipse()`?*  
@@ -121,6 +125,7 @@ Bij `ellipse()` is de `0,0` positie in het midden, bij `rect()` is dat standaard
 Dit kunnen we aanpassen door de functie `rectMode()` te gebruiken.  
 [https://p5js.org/reference/#/p5/rectMode](https://p5js.org/reference/#/p5/rectMode)
 
+- [ ] gebruik `rectMode()` in de `setup()`
 
 ```javaScript
 function setup() {
@@ -147,7 +152,7 @@ Kijk naar de volgende functies in de reference, bespreek met ze wat deze doen.
 - `strokeWeight()` [https://p5js.org/reference/#/p5/strokeWeight](https://p5js.org/reference/#/p5/strokeWeight)
 
 
-Maak een voorbeeld zodat je kan zien hoe de kleuren werken:
+- [ ] Maak een voorbeeld zodat je kan zien hoe de kleuren werken:
 - altijd de kleur boven de vorm zetten die je wilt kleuren
 - als je 1 kleur toevoegt, worden de anderen ook die kleur
 
@@ -173,4 +178,4 @@ function draw() {
 
 ---
 ### Opdracht:  
-Laat de leerlingen iets te tekenen zoals een poppetje, huisje of verschillende vormen bij elkaar.
+Laat de leerlingen iets tekenen zoals een figuur, huis of verschillende vormen bij elkaar.
