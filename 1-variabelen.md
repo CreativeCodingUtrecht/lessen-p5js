@@ -72,5 +72,100 @@ function draw() {
 }
 ```
 ---
-**Opdracht:**  
-Maak een variabele voor de x positie van de ellipse.
+## in het midden
+
+Wanneer we `createCanvas()` doen, maken we een canvas aan van een x breedte en een x hoogte. Deze waardes worden gelijk in variabelen opgeslagen die al zijn gedefineerd door het programma. Voor de breedte `width` en voor de hoogte `height`.
+
+- [ ] voeg `width` toe als x positie
+- [ ] de helft van de breedte door `width/2`
+
+```javaScript
+ellipse(width,100,afmetingRondjes);
+ellipse(width,200,afmetingRondjes);
+ellipse(width,300,afmetingRondjes);
+
+```
+
+- [ ] verander de breedte in `createCanvas()`, je ziet dat de cirkels in het midden blijven staan.
+
+
+```javaScript
+ createCanvas(500, 400);
+```
+
+---
+
+## nog meer cirkels
+
+Voor het maken van nog meer cirkels kunnen we nog meer cirkels kopiëren en plakken, en dan een waarde aanpassen.
+Er is ook een andere mogelijkheid genaamd een **for loop**
+
+Kijk eventueel naar de voorbeelden:  
+[Example: Iteration](https://p5js.org/examples/control-iteration.html)
+
+
+Een **for loop** wilt 3 statements hebben.
+- 1: start input
+- 2: eind input
+- 3: iteratie grootte
+
+
+- [ ] neem stapsgewijs over in `draw()`   
+
+een `for loop` beginnen we met `for` functie, die geven we 3x informatie. Tussen twee `{ }` / accolades. Accolades geven aan wat bij elkaar hoort. De accolades geven de begrenzing van een blok aan.
+
+
+```javaScript
+
+for ( 1 ; 2 ; 3 ){
+
+}
+
+```
+
+Als eerste geven we de start input. Daarin declareren we een variabele die we willen gebruiken.  Bijvoorbeeld `posY`, voor de positie van de y-as. Deze geven we als start waarde `0`.
+
+```javaScript
+
+for ( let posY = 0 ; 2 ; 3 ){
+
+}
+
+```
+
+
+Als volgende waarde, de eind waarde. Als voorbeeld `posY < 200`, zolang `posY` kleiner blijft dan `200` blijven we de for loop door laten gaan.
+
+```javaScript
+
+for ( let posY = 0 ; posY < 200 ; 3 ){
+
+}
+
+```
+als laatste geven we aan hoe groot we de stappen willen hebben. Als voorbeeld doen we `posY+= 25`, we zeggen hiermee, tel bij `posY` steeds `25` erbij.
+
+```javaScript
+
+for ( let posY = 0 ; posY < 200 ; posY+= 25 ){
+
+}
+
+```
+
+Als volgende willen we die variabele `posY` gaan gebruiken. We maken wat meer cirkels.
+
+```javaScript
+
+for ( let posY = 0 ; posY < 200 ; posY+= 25 ){
+    circle(100,posY,20);
+}
+```
+
+- [ ] laat de leerlingen verder spelen met deze functie doormiddel van waardes te veranderen.
+
+---
+**Aantal vragen en opdrachten:**  
+*welke variabele kunnen we gebruiken om tot helemaal onderaan te gaan?*  
+*maak de stappen groter*  
+*gebruik de `posY` ook voor het formaat van de cirkel*  
