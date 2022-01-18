@@ -116,17 +116,84 @@ Dit werkt helaas niet. de `xPos` is maar 1 frame zelfde aan `width` en daarna za
 *vraag: wat willen we veranderen?*  
 antwoord: de richting.
 
+- [ ] maak een variabele boven aan `int richting = 1`
+- [ ] gebruik `richting` om bij `xPos` op te tellen
 
 
+```javaScript
+let xPos = 0;
+let richting = 1;
+
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220);
+
+  ellipse(xPos,100,20);
+
+  xPos = xPos + richting;
+
+  if (xPos === width){
+      xPos = 0;
+  }
+}
+```
 
 
+- [ ] verander wat er in de statement moet gebeuren
 
+```javaScript
+if (xPos === width){
+      richting = -1;
+  }
+ ```
+
+*vraag: Werkt het? Wat moeten we nu doen om ook weer de andere kant op te gaan*
+
+```javaScript
+if (xPos === 0){
+    richting = 1;
+}
+```
+
+Eind programma:
+
+
+```javaScript
+let xPos = 0;
+let richting = 1;
+
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220);
+
+  ellipse(xPos,100,20);
+
+  xPos = xPos + richting;
+
+  if (xPos === width){
+      richting = -1;
+  }
+
+  if (xPos === 0){
+      richting = 1;
+  }
+}
+```
 
 
 ---
-**opdracht**
+**Extra**
 
+Bij het volgende voorbeeld komt er meer beweging en variabelen aan pas.   
+Ook is de if statement anders geschreven, kan je erachter komen wat er gebeurd en hoe het werkt?   
 
+[p5js.org / examples / Bounce](https://p5js.org/examples/motion-bounce.html)
 
 
 ---
@@ -134,3 +201,4 @@ antwoord: de richting.
 
 Voorbeeld:   
 [p5js.org / examples / Linear](https://p5js.org/examples/motion-linear.html)
+[p5js.org / examples / Bounce](https://p5js.org/examples/motion-bounce.html)
