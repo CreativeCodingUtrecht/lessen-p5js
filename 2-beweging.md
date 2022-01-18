@@ -197,6 +197,11 @@ Ook is de if statement anders geschreven, kan je erachter komen wat er gebeurd e
 
 
 ---
+**Andere soort beweging** 
+
+[p5js.org / examples / Sine](https://p5js.org/examples/math-sine.html)
+
+---
 ### referenties
 
 Voorbeeld:   
