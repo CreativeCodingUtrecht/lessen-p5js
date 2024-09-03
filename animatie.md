@@ -113,14 +113,14 @@ Q: Wat als we er 100 willen?
 A: daar voor hebben we for loop functie  
 
 ```javaScript
-// (start, eind, toeneming);
-for (var x = 0; x <= 200; x += 25){
+// (start, eind, iteratie);
+for (let x = 0; x <= 200; x += 25){
     rect(x,200,50,50);
 
 }
 
 ```
-- [ ] gebruik de x ook voor de `width` en `height` van de `rect()`
+- [ ] gebruik de `x` ook voor de `width` en `height` van de `rect()`
 - [ ] of voor de `fill()`  
 
 
@@ -133,21 +133,21 @@ Begin samen met het onderzoeken wat je in dit voorbeeld ziet en hoe de code werk
 
 
 - [ ] start met het toevoegen
-- `let diameter` en `angle = 0;`
-- geef de `diameter` ook een start waarde
+- `let cirkelGrootte` en `let rotatie = 0;`
+- geef de `cirkelGrootte` ook een start waarde
 - kopieer een van `d1 d2 d3`
-- gebruik die variabel in de vorm zoals `rect(x,200,d1,50)`
-- vergeet niet `angle += 0.02` buiten de for loop
-- voeg een variabel toe: `let = offSet`
-- gebruik deze in de `sin()` zoals `(sin(angle + offset) * diameter);`
+- gebruik die variabel in de vorm zoals `ellipse(x,200,cirkelGrootte)`
+- vergeet niet `rotatie += 0.02` buiten de for loop
+- voeg een variabel toe: `let = verschuiving`
+- gebruik deze in de `sin()` zoals `sin(rotatie + verschuiving) * cirkelGrootte; `
 - speel en ontdek verder
 
 
 
 ```javascript
-// variables
-var diameter = 100;
-var angle = 0;
+// Afmetingen en beweging
+let cirkelGrootte = 100; // De diameter van de cirkels
+let rotatie = 0; // De hoek waarmee de cirkels draaien
 
 function setup() {
   createCanvas(500, 500);
@@ -157,22 +157,22 @@ function setup() {
 function draw() {
   background(240);
 
+  // Teken meerdere cirkels
   // for loop = (start;eind;iteratie)
-  for (var x = 100; x < 400; x += 5) {
+  for (let x = 100; x < 400; x += 5) {
 
-    var offset = x / 2; // speel met de nummers om aan te passen
-    var d1 = (sin(angle + offset) * diameter); // sin functie voor de animatie
+    let verschuiving = x / 2; // Verschuiving voor elke cirkel
+    let straalVerandering = sin(rotatie + verschuiving) * cirkelGrootte;
+    // Verandering in straal
 
-    // ellipse(x positie, y positie, width, height)  
-    ellipse(x, (height / 2) + d1, d1, d1);
-    angle += 0.0002; // snelheid animatie
-
-    //print(d1); // print informatie naar de console
+    // Teken een ellips (cirkel)
+    ellipse(x, height / 2 + straalVerandering, straalVerandering, straalVerandering);
+    rotatie += 0.0002; // Verhoog de rotatiehoek voor de volgende frame
   }
 
 }
 ```
-[final in de p5js editor](https://editor.p5js.org/sasj/sketches/PCeRuDats)
+[final in de p5js editor](https://editor.p5js.org/sasj/sketches/aaY5xzqyf)
 
 
 - [ ] laat de leerlingen verder spelen met deze functie doormiddel van waardes te veranderen.
